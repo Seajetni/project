@@ -24,7 +24,7 @@ export default function Home(props : any) {
     <>
       <div className=" w-screen h-screen bg-black  flex p-1">
 
-        <nav className="  bg-blue-800  w-1/12 rounded-s-xl text-white">
+        <nav className="  bg-blue-800  w-1/6 rounded-s-xl text-white">
           <Nav/>
         </nav>
 
