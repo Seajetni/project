@@ -1,6 +1,7 @@
 import axios from "axios"
 import {Nav} from "../components/nav"
 import {Layout} from "../components/Layout"
+import { useState } from "react";
 
 export async function getStaticProps() {
   // Fetch data from an API
@@ -17,8 +18,16 @@ export async function getStaticProps() {
 
 export default function Home(props : any) {
 
+  const [on,setOn] = useState("ปั้มน้ำเปิดอยู่")
   const res:string = props.data.data.name
   console.log(res)
+
+  function Open(){
+    setOn("ปั้มน้ำเปิดอยู่")
+  }
+  function Off (){
+    setOn("ปั้มน้ำปิดอยู่")
+  }
 
   return (
     <>
@@ -42,9 +51,15 @@ export default function Home(props : any) {
             <p>กำลังผสมปุ๋ย</p>
           </div>
 
+
+          <div className="bg-yellow-100 rounded-2xl text-center">
+            <label htmlFor="">สถานะตอนนี้</label>
+            <p>{on}</p>
+          </div>
+
           <div className="flex justify-center m-2">
-            <button className=" rounded-full bg-blue-700 p-2 mr-4">on</button>
-            <button className="rounded-full bg-red-700 p-2">off</button>
+            <button className=" rounded-full bg-blue-700 p-2 mr-4" onClick={Open}>on</button>
+            <button className="rounded-full bg-red-700 p-2" onClick={Off}>off</button>
           </div>
 
 
@@ -54,3 +69,5 @@ export default function Home(props : any) {
    </>
   )
 }
+
+
