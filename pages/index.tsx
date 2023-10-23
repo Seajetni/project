@@ -26,7 +26,12 @@ export default function Home(props : any) {
   return (
     <>
 
-    <div className="bg-gray-200">
+<div
+      className="bg-local bg-cover"
+      style={{
+        backgroundImage: `url('https://images.pexels.com/photos/1153655/pexels-photo-1153655.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
+      }}
+    >
 
     <Layout>
       
