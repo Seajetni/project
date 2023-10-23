@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.nav{
+    @apply bg-blue-800  w-20 rounded-s-xl text-white
+}
+.Farm{
+    @apply w-screen text-center 
+
+
+}
+
+.fertilizer{
+    @apply bg-yellow-300
+}
+
