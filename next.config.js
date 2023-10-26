@@ -7,7 +7,7 @@ const nextConfig = {
 module.exports = {
   // ตัวเลือกการกำหนดค่าอื่น ๆ...
   env: {
-    NEXTAUTH_SECRET: 'https://project-sea.vercel.app/', // แทนที่ด้วยคีย์ลับจริงของคุณ
+    NEXTAUTH_SECRET: 'https://project-sea.vercel.app', // แทนที่ด้วยคีย์ลับจริงของคุณ
   },
 };
 
