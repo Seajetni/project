@@ -78,7 +78,7 @@ export default function Home(props: any) {
         <div className="relative text-white px-6 pb-6 mt-6">
           <span className="block opacity-75 -mb-1">PH value</span>
           <div className="flex justify-between">
-            <span className="block font-semibold text-xl">ค่า PH ปกติอยู่</span>
+            <span className="block font-semibold text-xl">ค่า PH ปกติอยู่?</span>
             <span className=" bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center">{pH}</span>
           </div>
         </div>
