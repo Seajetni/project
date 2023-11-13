@@ -18,7 +18,7 @@ export const Layout = (props) => {
   }
   return <>
     <div className='bg-black w-screen h-screen text-white justify-center flex'>
-      <button onClick={() => signIn('google')}>Pls Sign in!</button>
+      <button onClick={() => signIn('google')}>Pls Sign in!!!</button>
     </div>
     
   </>
