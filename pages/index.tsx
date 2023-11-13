@@ -1,10 +1,11 @@
 
+import { useEffect, useState } from "react";
 import {Layout} from "../components/Layout"
 
 
 export async function getStaticProps() {
   // Fetch data from an API
-  const res = await fetch('https://api-kup.vercel.app/api/product/653122d5cc7450b0554ca810');
+  const res = await fetch('https://api-kup.vercel.app/api/product/6551a3d4bd6eeffe50f8d24f');
   const data = await res.json();
 
   // Return the data as props
@@ -15,13 +16,29 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home(props : any) {
+export default function Home(props: any) {
+  const [pH, setPH] = useState<number>(0);
 
- 
-  const res:string = props.data.data.name
-  console.log(res)
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch('https://api-kup.vercel.app/api/product/6551a3d4bd6eeffe50f8d24f');
+        const data = await res.json();
+        const newPH = parseFloat(data.data.value).toFixed(2);
+        const pH: any = newPH
+        setPH(pH);
+      } catch (error) {
+        console.error('Error fetching pH data:', error);
+      }
+    };
 
+    const intervalId = setInterval(fetchData, 1000);
 
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+
+  }, []); // Empty dependency array to run the effect only once on mount
+
+  const roundedNumber = parseFloat(pH).toFixed(2);
 
   return (
     <>
@@ -62,7 +79,7 @@ export default function Home(props : any) {
           <span className="block opacity-75 -mb-1">PH value</span>
           <div className="flex justify-between">
             <span className="block font-semibold text-xl">ค่า PH ปกติอยู่</span>
-            <span className=" bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center">5.5</span>
+            <span className=" bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center">{pH}</span>
           </div>
         </div>
       </div>
