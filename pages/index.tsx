@@ -38,7 +38,6 @@ export default function Home(props: any) {
 
   }, []); // Empty dependency array to run the effect only once on mount
 
-  const roundedNumber = parseFloat(pH).toFixed(2);
 
   return (
     <>
