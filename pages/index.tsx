@@ -53,7 +53,7 @@ export default function Home(props: any) {
       
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
     <div className=" flex flex-wrap items-center justify-center ">
-      <div className="flex-shrink-0 m-5 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg">
+      <div className="flex-shrink-0 m-5 relative overflow-hidden  bg-yellow-400 rounded-lg max-w-xs shadow-lg">
         <svg
           className="absolute bottom-0 left-0 mb-8"
           viewBox="0 0 375 283"
@@ -74,11 +74,11 @@ export default function Home(props: any) {
             alt=""
             />
         </div>
-        <div className="relative text-white px-6 pb-6 mt-6">
+        <div className="relative text-black px-6 pb-6 mt-6">
           <span className="block opacity-75 -mb-1">PH value</span>
           <div className="flex justify-between">
             <span className="block font-semibold text-xl">ค่า PH ปกติอยู่?</span>
-            <span className=" bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center">{pH}</span>
+            <span className=" bg-white rounded-full text-black text-xs font-bold px-3 py-2 leading-none flex items-center">{pH}</span>
           </div>
         </div>
       </div>
@@ -86,7 +86,7 @@ export default function Home(props: any) {
     </div>
 
     <div className=" flex flex-wrap items-center justify-center">
-      <div className="flex-shrink-0 m-5 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg">
+      <div className="flex-shrink-0 m-5 relative overflow-hidden bg-yellow-400  rounded-lg max-w-xs shadow-lg">
         <svg
           className="absolute bottom-0 left-0 mb-8"
           viewBox="0 0 375 283"
@@ -107,11 +107,11 @@ export default function Home(props: any) {
             alt=""
             />
         </div>
-        <div className="relative text-white px-6 pb-6 mt-6">
+        <div className="relative text-black px-6 pb-6 mt-6">
           <span className="block opacity-75 -mb-1">Pump</span>
           <div className="flex justify-between">
             <span className="block font-semibold text-xl">Working</span>
-            <span className=" bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center">กำลังปั้มน้ำ</span>
+            <span className=" bg-white rounded-full text-black text-xs font-bold px-3 py-2 leading-none flex items-center">กำลังปั้มน้ำ</span>
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@ export default function Home(props: any) {
     </div>
 
     <div className=" flex flex-wrap items-center justify-center">
-      <div className="flex-shrink-0 m-5 relative overflow-hidden bg-orange-500 rounded-lg max-w-xs shadow-lg">
+      <div className="flex-shrink-0 m-5 relative overflow-hidden bg-yellow-400  rounded-lg max-w-xs shadow-lg">
         <svg
           className="absolute bottom-0 left-0 mb-8"
           viewBox="0 0 375 283"
@@ -140,11 +140,11 @@ export default function Home(props: any) {
             alt=""
           />
         </div>
-        <div className="relative text-white px-6 pb-6 mt-6">
+        <div className="relative text-black px-6 pb-6 mt-6">
           <span className="block opacity-75 -mb-1">Fertilizer</span>
           <div className="flex justify-between">
             <span className="block font-semibold text-xl">Valve</span>
-            <span className=" bg-white rounded-full text-orange-500 text-xs font-bold px-3 py-2 leading-none flex items-center">OFF</span>
+            <span className=" bg-white rounded-full text-black text-xs font-bold px-3 py-2 leading-none flex items-center">OFF</span>
           </div>
         </div>
       </div>
